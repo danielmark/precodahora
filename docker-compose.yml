@@ -1,0 +1,12 @@
+version: '3.5'
+
+services:
+  php:
+    container_name: webapp-precodahora
+    build: .
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+     - ./:/var/www/html
+     - ./webapp-precodahora/local.ini:/usr/local/etc/php/conf.d/local.ini
